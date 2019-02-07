@@ -46,3 +46,10 @@ document.querySelector('.memory-clear')
         memory = '';
 
     });
+
+document.querySelector('.sqrt')
+    .addEventListener('click', function() {
+        const calcResult = eval(display.value)
+        display.value = Math.sqrt(calcResult);
+
+    });
