@@ -4,7 +4,7 @@ const display = document.querySelector('.calculator input[name=display]');
 
 let memory;
 
-document.querySelectorAll('.digits, .opers')
+document.querySelectorAll('.digits button, .opers button')
     .forEach(btn => btn.addEventListener('click', digitOperPressed));
 
 function digitOperPressed(e) {
