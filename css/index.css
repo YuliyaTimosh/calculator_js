@@ -1,14 +1,33 @@
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
 }
 
 .title {
-    color: whitesmoke;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: #ffffff;
 }
 
-.title,
 .first__line {
     padding-bottom: 25px;
+}
+
+.input {
+    font-size: 16px;
+    width: 160px;
+    border: none;
+    color: #0069ed;
+    font-weight: 550;
+}
+
+.input::placeholder {
+    color: #0069ed;
 }
 
 .center {
@@ -16,29 +35,55 @@
 }
 
 button {
-    margin-bottom: 3px;
-    width: 40px;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 50px;
     font-size: 16px;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-weight: 550;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.input {
-    font-size: 16px;
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
 }
 
 .main__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    background-image: url(../img/background.jpg);
+    border: 5px solid rgb(81, 239, 179);
+    /* box-shadow: 5px 3px 2px rgb(100, 235, 183); */
+    /*     background-image: url(../img/background.jpg);
     background-size: cover;
-    background-position: right 35% bottom 45%;
+    background-position: right 35% bottom 45%; */
+    background-color: rgb(146, 199, 246);
     flex-direction: column;
     margin: auto;
-    margin-top: 5%;
-    width: 450px;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    width: 300px;
+    height: 400px;
+    /*     padding-top: 30px;
+    padding-bottom: 25px; */
+    position: relative;
 }
 
 .calculator {
@@ -46,8 +91,9 @@ button {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    width: 400px;
+    width: 350px;
     margin: auto;
+    position: absolute;
 }
 
 .calc__btns {

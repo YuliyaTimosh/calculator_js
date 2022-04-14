@@ -17,7 +17,11 @@ function displayValueOnInput(e) {
 }
 
 function showResult() {
+    if (inputField.value === '') {
+        return;
+    }
     inputField.value = eval(inputField.value);
+
 }
 
 function clearValueOnInput() {
@@ -29,7 +33,8 @@ function clearByOneSign() {
 }
 
 function toSqrt() {
-    inputField.value = inputField.value;
-    console.log(inputValue.value);
-    inputField.value = Math.sqrt(calcResult);
+    showResult();
+    inputField.value = Math.sqrt(inputField.value);
+    console.log(inputField.value);
+
 }
